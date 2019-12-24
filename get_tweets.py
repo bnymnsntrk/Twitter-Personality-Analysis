@@ -55,12 +55,12 @@ def get_all_tweets(screen_name):
         "...%s tweets downloaded so far" % (len(alltweets))
 
     # transform the tweepy tweets into a 2D array that will populate the csv	
-    outtweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")] for tweet in alltweets]
+    outtweets = [[tweet.text.encode("utf-8")] for tweet in alltweets]
 
     # write the csv	
     with open('%s_tweets.csv' % screen_name, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(["id", "created_at", "text"])
+        writer.writerow(["text"])
         writer.writerows(outtweets)
 
     pass
@@ -68,4 +68,5 @@ def get_all_tweets(screen_name):
 
 if __name__ == '__main__':
     # pass in the username of the account you want to download
-    get_all_tweets("J_tsar")
+    get_all_tweets("bunthebig")
+
