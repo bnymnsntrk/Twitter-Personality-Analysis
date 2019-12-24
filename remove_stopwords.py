@@ -29,6 +29,17 @@ def remove_stops(user):
             appendFile.close()
 
 
+def remove_usernames(user):
+    file = '%s_filtered.txt' % user
+    with open(file, "r+") as f:
+        d = f.readlines()
+        f.seek(0)
+        for i in d:
+            if not(i.startswith("b'@") | i.startswith("RT") | i.startswith("b\"@") | i.startswith("@")):
+                f.write(i)
+        f.truncate()
+
+
 """
 def remove_punction_and_stopwords(msg):
     stop_words = set(stopwords.words('english'))
@@ -38,5 +49,6 @@ def remove_punction_and_stopwords(msg):
     return new_sentence
 """
 
-to_text("bunthebig")
-remove_stops("bunthebig")
+#to_text("bunthebig")
+#remove_stops("bunthebig")
+remove_usernames("bunthebig")
