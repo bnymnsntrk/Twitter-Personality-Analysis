@@ -1,10 +1,7 @@
 import string
 import io
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 import csv
-
-user = "realdonaldtrump"
 
 
 def to_text(user):
@@ -52,9 +49,3 @@ def remove_usernames(user):
                     | i.__contains__("&") | i.__contains__("\\n")):
                 f.write(i.lower())
         f.truncate()
-
-
-to_text(user)
-remove_stops(user, 1)
-remove_usernames(user)
-remove_stops(user, 2)
