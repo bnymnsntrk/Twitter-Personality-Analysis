@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd1ec3e-5314-4150-a870-9a399d42294f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/realdonaldtrump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realdonaldtrump_final.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J_tsar_tweets.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_filtered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_tweets.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_tweets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/remove_stopwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/remove_stopwords.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +31,11 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1U4GhFHo1i39Wk9xfiB7uuEFKXp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -115,5 +126,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

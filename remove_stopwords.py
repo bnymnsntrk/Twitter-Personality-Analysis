@@ -4,28 +4,41 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import csv
 
+user = "realdonaldtrump"
+
 
 def to_text(user):
     csv_file = '%s_tweets.csv' % user
-    txt_file = '%s_txt.txt' % user
+    txt_file = '%s.txt' % user
 
-    with open(txt_file, "w") as my_output_file:
-        with open(csv_file, "r") as my_input_file:
-            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file)]
-        my_output_file.close()
+    with open(txt_file, "w") as output_file:
+        with open(csv_file, "r") as input_file:
+            [output_file.write(" ".join(row) + '\n') for row in csv.reader(input_file)]
+        output_file.close()
 
 
-def remove_stops(user):
-    txt_in = '%s_txt.txt' % user
-    txt_out = '%s_filtered.txt' % user
+def remove_stops(user, time):
+
+    if time == 1:
+        txt_in = '%s.txt' % user
+        txt_out = '%s_filtered.txt' % user
+    else:
+        txt_in = '%s_filtered.txt' % user
+        txt_out = '%s_final.txt' % user
+
     stop_words = set(stopwords.words('english'))
     file1 = open(txt_in)
     line = file1.read()  # Use this to read file content as a stream:
+
+    line = line.replace('b\'', '')
+    line = line.replace('\'\n', '')
+    line = line.replace('\n', ' ')
+
     words = line.split()
     for r in words:
         if not r in stop_words:
             appendFile = open(txt_out, 'a')
-            appendFile.write("\n"+r)
+            appendFile.write(r + "\n")
             appendFile.close()
 
 
@@ -35,20 +48,13 @@ def remove_usernames(user):
         d = f.readlines()
         f.seek(0)
         for i in d:
-            if not(i.startswith("b'@") | i.startswith("RT") | i.startswith("b\"@") | i.startswith("@")):
-                f.write(i)
+            if not (i.__contains__("@") | i.__contains__("RT") | i.__contains__("http") | i.__contains__("#")
+                    | i.__contains__("&") | i.__contains__("\\n")):
+                f.write(i.lower())
         f.truncate()
 
 
-"""
-def remove_punction_and_stopwords(msg):
-    stop_words = set(stopwords.words('english'))
-    word_tokens = word_tokenize(msg)
-    filtered_words = [w for w in msg if w not in word_tokens and w not in string.punctuation]
-    new_sentence = ''.join(filtered_words)
-    return new_sentence
-"""
-
-#to_text("bunthebig")
-#remove_stops("bunthebig")
-remove_usernames("bunthebig")
+to_text(user)
+remove_stops(user, 1)
+remove_usernames(user)
+remove_stops(user, 2)
