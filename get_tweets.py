@@ -1,6 +1,7 @@
 import tweepy
 import csv
 import prepare_data
+import test
 
 consumer_key = 'y4Rd64OAuRMuf2OoXBq7XoC8k'
 consumer_secret = 'KoO8UZzPTSWuhj5TxEEwXyAu0H5s1hEMCQVmNAUj7F3ceQ1ecA'
@@ -54,12 +55,5 @@ def get_all_tweets(screen_name):
 
     pass
 
-
-if __name__ == '__main__':
     # pass in the username of the account you want to download
     # get_all_tweets("realdonaldtrump")
-
-    prepare_data.to_text("realdonaldtrump")
-    prepare_data.remove_stops("realdonaldtrump", 1)
-    prepare_data.remove_usernames("realdonaldtrump")
-    prepare_data.remove_stops("realdonaldtrump", 2)

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd1ec3e-5314-4150-a870-9a399d42294f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remove_stopwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realdonaldtrump_final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/realdonaldtrump_final.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.get_tweets">
     <configuration name="get_tweets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ml_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,8 +111,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.get_tweets" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.remove_stopwords" />
       </list>
     </recent_temporary>

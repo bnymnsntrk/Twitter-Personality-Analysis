@@ -9,12 +9,20 @@ from nltk.tokenize import word_tokenize
 import re
 import string
 import random
+import prepare_data
+
+prepare_data.to_text("realdonaldtrump")
+prepare_data.remove_stops("realdonaldtrump", 1)
+prepare_data.remove_usernames("realdonaldtrump")
+prepare_data.remove_stops("realdonaldtrump", 2)
+
+with open('realdonaldtrump_final.txt', 'r') as file:
+    data = file.read()
 
 stop_words = stopwords.words('english')
 
 positive_tweets = twitter_samples.strings('positive_tweets.json')
 negative_tweets = twitter_samples.strings('negative_tweets.json')
-text = twitter_samples.strings('tweets.20150430-223406.json')
 
 tweet_tokens = twitter_samples.tokenized('positive_tweets.json')
 
@@ -70,14 +78,6 @@ for tokens in negative_tweet_tokens:
     negative_cleaned_tokens_list.append(remove_noise(tokens, stop_words))
 
 
-def get_all_words(cleaned_tokens_list):
-    for tokens in cleaned_tokens_list:
-        for token in tokens:
-            yield token
-
-
-all_pos_words = get_all_words(positive_cleaned_tokens_list)
-freq_dist_pos = FreqDist(all_pos_words)
 
 
 def get_tweets_for_model(cleaned_tokens_list):
@@ -103,11 +103,9 @@ test_data = dataset[7000:]
 
 classifier = NaiveBayesClassifier.train(train_data)
 
-#print("Accuracy is:", classify.accuracy(classifier, test_data))
-#print(classifier.show_most_informative_features(10))
+print("Accuracy is:", classify.accuracy(classifier, test_data))
+print(classifier.show_most_informative_features(10))
 
-custom_tweet = "I love flowersyuıopğ"
 
-custom_tokens = remove_noise(word_tokenize(custom_tweet))
-
+custom_tokens = remove_noise(word_tokenize(data))
 print(classifier.classify(dict([token, True] for token in custom_tokens)))
