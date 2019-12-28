@@ -83,8 +83,8 @@ all_pos_words = get_all_words(positive_cleaned_tokens_list)
 all_neg_words = get_all_words(negative_cleaned_tokens_list)
 freq_dist_pos = FreqDist(all_pos_words)
 freq_dist_neg = FreqDist(all_neg_words)
-print(freq_dist_pos.most_common(10))
-print(freq_dist_neg.most_common(10))
+print(freq_dist_pos.most_common(20))
+print(freq_dist_neg.most_common(20))
 
 
 def get_tweets_for_model(cleaned_tokens_list):
@@ -102,17 +102,15 @@ negative_dataset = [(tweet_dict, "Negative")
                      for tweet_dict in negative_tokens_for_model]
 
 dataset = positive_dataset + negative_dataset
-
 random.shuffle(dataset)
 
-train_data = dataset[:2000]
-test_data = dataset[2000:]
+train_data = dataset[:7000]
+test_data = dataset[7000:]
 
 classifier = NaiveBayesClassifier.train(train_data)
-
 print("Accuracy is:", classify.accuracy(classifier, test_data))
-print(classifier.show_most_informative_features(10))
-
+print(classifier.show_most_informative_features(20))
 
 custom_tokens = remove_noise(word_tokenize(data))
 print(classifier.classify(dict([token, True] for token in custom_tokens)))
+print(custom_tokens)
