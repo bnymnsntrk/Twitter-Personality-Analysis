@@ -16,7 +16,7 @@ prepare_data.to_text(account)
 prepare_data.remove_stops(account, 1)
 prepare_data.remove_usernames(account)
 prepare_data.remove_stops(account, 2)
-with open('%s_final.txt', 'r') % account as file:
+with open('realdonaldtrump_final.txt', 'r') as file:
     data = file.read()
 
 stop_words = stopwords.words('english')
@@ -114,4 +114,14 @@ print(classifier.show_most_informative_features(20))
 custom_tokens = remove_noise(word_tokenize(data))
 print(classifier.classify(dict([token, True] for token in custom_tokens)))
 print(custom_tokens)
-print(custom_tokens.most_common(20))
+
+unique_words = set(custom_tokens)
+freq_list = []
+
+for words in unique_words:
+    freq_list.append([custom_tokens.count(words), words])
+
+i = 1
+while i < 101:
+    print(sorted(freq_list)[-i])
+    i += 1
