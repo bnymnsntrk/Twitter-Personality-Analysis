@@ -11,12 +11,12 @@ import string
 import random
 import prepare_data
 
-prepare_data.to_text("realdonaldtrump")
-prepare_data.remove_stops("realdonaldtrump", 1)
-prepare_data.remove_usernames("realdonaldtrump")
-prepare_data.remove_stops("realdonaldtrump", 2)
-
-with open('realdonaldtrump_final.txt', 'r') as file:
+account = "realdonaldtrump"
+prepare_data.to_text(account)
+prepare_data.remove_stops(account, 1)
+prepare_data.remove_usernames(account)
+prepare_data.remove_stops(account, 2)
+with open('%s_final.txt', 'r') % account as file:
     data = file.read()
 
 stop_words = stopwords.words('english')
@@ -106,11 +106,12 @@ random.shuffle(dataset)
 
 train_data = dataset[:7000]
 test_data = dataset[7000:]
-
 classifier = NaiveBayesClassifier.train(train_data)
+
 print("Accuracy is:", classify.accuracy(classifier, test_data))
 print(classifier.show_most_informative_features(20))
 
 custom_tokens = remove_noise(word_tokenize(data))
 print(classifier.classify(dict([token, True] for token in custom_tokens)))
 print(custom_tokens)
+print(custom_tokens.most_common(20))
