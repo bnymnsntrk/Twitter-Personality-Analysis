@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd1ec3e-5314-4150-a870-9a399d42294f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bunthebig.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunthebig_filtered2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunthebig_final.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunthebig_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GretaThunberg_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ibra_official_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JeremyClarkson_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barackobama_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elonmusk_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ladygaga_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realhughjackman_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setheverman_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ubisoft_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vancityreynolds_final.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_filtered2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_final.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunthebig_tweets.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/get_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
